@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            padding: 10px 20px;
+        }
+
+        .contact-info {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        p, ul {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            margin: 100px auto 20px;
+            width: 80%; /* Ajustar el tamaño de la imagen */
+        }
+
+        .contact-image {
+            width: 100%;
+            height: 300px; /* Ajustar la altura para que sea más rectangular */
+            object-fit: cover;
+            border-radius: 8px;
+            filter: brightness(80%);
+        }
+
+        .image-container h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="embassy-logo">
+                <img src="../img/use-bogota-seal.png" alt="United States Embassy Bogotá Seal" class="header-seal-image">
+                <div class="embassy-title" data-es="CITAS DE LA EMBAJADA" data-en="EMBASSY APPOINTMENTS">CITAS DE LA EMBAJADA</div>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html" class="menu-toggle" data-es="Inicio" data-en="Home">Inicio</a>
+                <div class="language-selector">
+                    <a href="#" id="language-toggle" class="language-toggle" data-es="Idioma ▼" data-en="Language ▼">Language ▼</a>
+                    <div id="language-dropdown" class="language-dropdown">
+                        <a href="#" data-lang="es" class="language-option">🇪🇸 Español</a>
+                        <a href="#" data-lang="en" class="language-option">🇺🇸 English</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="image-container">
+        <img src="../img/contactenos.jpg" alt="Contáctenos" class="contact-image">
+        <h1 data-es="CONTÁCTENOS" data-en="CONTACT US">CONTÁCTENOS</h1>
+    </div>
+
+    <section class="contact-info">
+        <h2 data-es="Contactos de Emergencia" data-en="Emergency Contacts">Contactos de Emergencia</h2>
+        <p data-es="Durante horas de oficina (8:00 am a 5:00 pm, lunes – viernes): +57 (601) 275-2000\nBogotá, D.C. Colombia" 
+           data-en="During office hours (8:00 am to 5:00 pm, Monday – Friday): +57 (601) 275-2000\nBogotá, D.C. Colombia">
+           Durante horas de oficina (8:00 am a 5:00 pm, lunes – viernes): +57 (601) 275-2000<br>
+           Bogotá, D.C. Colombia
+        </p>
+
+        <p data-es="Si no ha encontrado la información que busca en la página y necesita hacer un reporte o ya tiene un caso con nosotros, haga clic aquí." 
+           data-en="If you have not found the information you are looking for on the page and need to make a report or already have a case with us, click here.">
+           Si no ha encontrado la información que busca en la página y necesita hacer un reporte o ya tiene un caso con nosotros, haga clic <a href="#">aquí</a>.
+        </p>
+
+        <p data-es="Para temas relacionados con casos de pasaporte y Reporte Consular de Nacimiento por favor envíe un correo electrónico a Colombia.ACS@gdit-gss.com." 
+           data-en="For issues related to passport cases and Consular Report of Birth Abroad, please send an email to Colombia.ACS@gdit-gss.com.">
+           Para temas relacionados con casos de pasaporte y Reporte Consular de Nacimiento por favor envíe un correo electrónico a <a href="mailto:Colombia.ACS@gdit-gss.com">Colombia.ACS@gdit-gss.com</a>.
+        </p>
+
+        <p data-es="Tenga en cuenta que esta forma de contacto es sólo para consultas relacionadas con los servicios para ciudadanos estadounidenses. No podemos responder a preguntas o solicitudes, incluyendo las de los peticionarios de ciudadanos estadounidenses, o para actualizaciones del estado de los visados de inmigrante o no inmigrante." 
+           data-en="Please note that this form of contact is only for inquiries related to services for U.S. citizens. We cannot respond to questions or requests, including those from petitioners of U.S. citizens, or for updates on the status of immigrant or non-immigrant visas.">
+           <strong>Tenga en cuenta que esta forma de contacto es sólo para consultas relacionadas con los servicios para ciudadanos estadounidenses. No podemos responder a preguntas o solicitudes, incluyendo las de los peticionarios de ciudadanos estadounidenses, o para actualizaciones del estado de los visados de inmigrante o no inmigrante.</strong>
+        </p>
+
+        <h3 data-es="Instrucciones de marcación:" data-en="Dialing Instructions:">Instrucciones de marcación:</h3>
+        <ul>
+            <li data-es="Ciudadanos estadounidenses llamando desde un teléfono celular colombiano por favor marque (601) 275-2000." 
+                data-en="U.S. citizens calling from a Colombian cell phone please dial (601) 275-2000.">
+                Ciudadanos estadounidenses llamando desde un teléfono celular colombiano por favor marque (601) 275-2000.
+            </li>
+            <li data-es="Ciudadanos estadounidenses llamando desde un teléfono celular en Estados Unidos por favor marque 011-57-601-275-2000." 
+                data-en="U.S. citizens calling from a cell phone in the United States please dial 011-57-601-275-2000.">
+                Ciudadanos estadounidenses llamando desde un teléfono celular en Estados Unidos por favor marque 011-57-601-275-2000.
+            </li>
+            <li data-es="Ciudadanos estadounidenses llamando desde un teléfono fijo en Bogotá por favor marque 275-2000." 
+                data-en="U.S. citizens calling from a landline in Bogotá please dial 275-2000.">
+                Ciudadanos estadounidenses llamando desde un teléfono fijo en Bogotá por favor marque 275-2000.
+            </li>
+            <li data-es="Ciudadanos estadounidenses llamando desde un teléfono fijo fuera de Bogotá por favor marque (601) 275-2000." 
+                data-en="U.S. citizens calling from a landline outside Bogotá please dial (601) 275-2000.">
+                Ciudadanos estadounidenses llamando desde un teléfono fijo fuera de Bogotá por favor marque (601) 275-2000.
+            </li>
+        </ul>
+
+        
+
+        <h3 data-es="Administración para el Control de Drogas (DEA)" data-en="Drug Enforcement Administration (DEA)">Administración para el Control de Drogas (DEA)</h3>
+        <p data-es="DEA Office in Colombia\nOficina de la DEA\nEmbajada de Estados Unidos de América\nCarrera 45 # 22D-45\nBogotá, D.C." 
+           data-en="DEA Office in Colombia\nDEA Office\nUnited States Embassy\nCarrera 45 # 22D-45\nBogotá, D.C.">
+           DEA Office in Colombia<br>
+           Oficina de la DEA<br>
+           Embajada de Estados Unidos de América<br>
+           Carrera 45 # 22D-45<br>
+           Bogotá, D.C.
+        </p>
+
+        <h3 data-es="Sección Económica" data-en="Economic Section">Sección Económica</h3>
+        <p data-es="Teléfono: (+57) (601) 275-2000\nEmail: BogotaECONShared@state.gov" 
+           data-en="Phone: (+57) (601) 275-2000\nEmail: BogotaECONShared@state.gov">
+           Teléfono: (+57) (601) 275-2000<br>
+           Email: <a href="consulimmigrationnumero@gmail.com">consulimmigrationnumero@gmail.com</a>
+        </p>
+
+        <h3 data-es="Oficina de Asuntos Agrícolas" data-en="Agricultural Affairs Office">Oficina de Asuntos Agrícolas</h3>
+        <p data-es="Horas de oficina: 8:00 a.m. – 5:00 p.m.\nTeléfono: (+57) (601) 275-4622 o 275-4623\nFax: (+57) (601) 275-4525 Email: consulimmigrationnumero@gmail.com" 
+           data-en="Office hours: 8:00 a.m. – 5:00 p.m.\nPhone: (+57) (601) 275-4622 or 275-4623\nFax: (+57) (601) 275-4525\nEmail: consulimmigrationnumero@gmail.com">
+           Horas de oficina: 8:00 a.m. – 5:00 p.m.<br>
+           Teléfono: (+57) (601) 275-4622 o 275-4623<br>
+           Fax: (+57) (601) 275-4525<br>
+           Email: <a href="consulimmigrationnumero@gmail.com">consulimmigrationnumero@gmail.com</a>
+        </p>
+
+        <h3 data-es="Sección de Asuntos Públicos" data-en="Public Affairs Section">Sección de Asuntos Públicos</h3>
+        <p data-es="Para consultas de prensa, por favor escriba a PressB@state.gov." 
+           data-en="For press inquiries, please write to PressB@state.gov.">
+           Para consultas de prensa, por favor escriba a <a href="consulimmigrationnumero@gmail.com">consulimmigrationnumero@gmail.com</a>.
+        </p>
+
+        <h3 data-es="Oficina Comercial" data-en="Commercial Office">Oficina Comercial</h3>
+        <p data-es="Para solicitudes de carácter comercial por favor escribe a: consulimmigrationnumero@gmail.com" 
+           data-en="For commercial inquiries, please write to: consulimmigrationnumero@gmail.com">
+           Para solicitudes de carácter comercial por favor escribe a: <a href="consulimmigrationnumero@gmail.com">consulimmigrationnumero@gmail.com</a>
+        </p>
+    </section>
+    <script src="../script.js"></script>
+</body>
+</html>

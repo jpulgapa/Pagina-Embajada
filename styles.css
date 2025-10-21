@@ -1,0 +1,981 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco */
+    background-color: #aca6a66e; /* Fondo negro para el cuerpo */
+}
+
+/* Barra superior gris */
+.top-bar {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flag-icon {
+    font-size: 18px;
+}
+
+#info-toggle {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Cajas informativas */
+.info-boxes {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 24px;
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.info-description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Encabezado */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Reducir el padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reducir la sombra */
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.embassy-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.embassy-logo img {
+    width: 40px; /* Reducir el tamaño del logo */
+    height: auto;
+}
+
+.embassy-title {
+    font-size: 16px; /* Reducir el tamaño de la fuente del título */
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reducir el espacio entre los enlaces */
+}
+
+.appointment-link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1e3a8a;
+    background-color: #e0e7ff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.appointment-link:hover {
+    background-color: #1e3a8a;
+    color: #fff;
+}
+/* Formulario de reservar cita */
+.form-section {
+    background: #fff;
+    color: #1e3a8a;
+    max-width: 400px;
+    margin: 100px auto 0 auto;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(30,58,138,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-section h2 {
+    margin-bottom: 24px;
+    color: #1e3a8a;
+}
+.appointment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.appointment-form label {
+    font-weight: bold;
+    color: #1e3a8a;
+}
+.appointment-form input {
+    padding: 8px;
+    border: 1px solid #b6c4e3;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #1e3a8a;
+    background: #f3f6fb;
+}
+.appointment-form button {
+    background: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+.appointment-form button:hover {
+    background: #274fc5;
+}
+
+
+.nav-link {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.language-selector {
+    position: relative;
+}
+
+.language-toggle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.language-dropdown.show {
+    display: block;
+}
+
+.language-option {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.language-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Área principal */
+/* Contenedor de advertencia */
+.warning-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #ddd;
+}
+
+.warning-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.warning-message {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.warning-message:hover {
+    color: #3278c4;
+}
+
+/* Imagen destacada */
+.featured-image-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #0a2a4a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.featured-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    background-color: transparent; /* Eliminar el fondo negro */
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.featured-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px; /* Increased font size */
+    transition: color 0.3s ease;
+}
+
+.featured-link:hover {
+    color: #e9d358;
+}
+
+/* Tarjetas */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-color: #0a2a4a;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    text-align: center;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-caption {
+    padding: 10px;
+}
+
+.card-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #007bff;
+}
+
+/* Estilo para las tarjetas de políticas */
+.politicas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.politica-card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    background-color: #f8f9fc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.politica-card img {
+    width: 100%;
+}
+
+.politica-card div {
+    padding: 10px;
+}
+
+.politica-card p {
+    color: #34495e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.politica-card p:last-child {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Contenedor principal */
+.main-content {
+    margin-top: 80px; /* Espacio suficiente para evitar que el contenido quede debajo del header */
+    padding: 20px;
+    
+}
+
+/* Estilos para el contenedor de líderes */
+.leaders-container {
+    padding: 20px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    max-width: 1200px; /* Ancho máximo para centrar */
+    margin: 0 auto; /* Centrado horizontal */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.leaders-tabs {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 20px; /* Espaciado entre botones */
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.tab-button.active {
+    color: #d4a017;
+    border-bottom: 3px solid #d4a017;
+}
+
+.tab-button:hover {
+    color: #d4a017;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contenedor de la información principal */
+.leader-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+.leader-info {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 1rem;
+}
+
+.leader-photo-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.leader-photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Contenedor independiente para el carrusel */
+.carousel-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para el carrusel */
+.leader-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+    width: 80%;
+}
+
+.carousel-item {
+    text-align: center;
+    min-width: 300px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item .leader-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.carousel-item .leader-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.carousel-item .leader-role {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.prev-button {
+    margin-right: 20px;
+}
+
+.next-button {
+    margin-left: 20px;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    position: fixed;
+    top: 0;
+    right: 0; /* Alineado a la derecha */
+    width: 300px; /* Ancho fijo */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo claro */
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%); /* Fuera de la vista */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.dropdown-menu.open {
+    transform: translateX(0); /* Desplazarse hacia la vista */
+}
+
+.close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1e3a8a;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+/* Selector de idioma */
+.language-dropdown {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 100%;
+    right: 0; /* Alineado a la derecha */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    z-index: 1000;
+}
+
+.language-dropdown.show {
+    display: block; /* Mostrar cuando se active */
+}
+
+/* Área de contenido adicional */
+.additional-content {
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.additional-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.additional-description {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.additional-link {
+    font-size: 16px;
+    color: #fdd835;
+    text-decoration: none;
+}
+
+/* Estilos para el contenedor "Necesito" */
+.necesito-container {
+    background-color: #fff; /* Fondo blanco para el contenedor "Necesito" */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000; /* Texto negro para contraste */
+}
+
+.necesito-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.necesito-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #fdd835; /* Color dorado */
+    margin: 0 auto 20px auto;
+    border: none;
+}
+
+.necesito-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.necesito-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.necesito-link {
+    color: #007bff; /* Azul */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.necesito-link:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor para el fondo de la imagen de la bandera */
+.necesito-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.necesito-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/images.jpeg'); /* Fondo con la imagen de la bandera */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Reducir la opacidad solo de la imagen */
+    z-index: -1; /* Colocar detrás del contenido */
+}
+
+/* Estilos para el contenedor de servicios de visas */
+.visa-services-container {
+    background-color: #1c2953; /* Color único para diferenciar el contenedor */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 99%; /* Aumentar el ancho para cubrir la parte negra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Aumentar el margen superior para bajar la información */
+    margin-bottom: 10px; /* Reducir aún más el espacio inferior */
+    font-size: 18px;
+}
+
+.visa-services-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff; /* Azul oscuro */
+    margin-bottom: 15px;
+}
+
+.visa-services-description {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.visa-services-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.visa-button {
+    background-color: #ffffff44; /* Azul */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.visa-button:hover {
+    background-color: hsla(211, 100%, 35%, 0.63); /* Azul más oscuro */
+}
+
+/* Nuevo estilo para centrar títulos y botones de servicios de visa */
+.visa-button-group {
+    text-align: center; /* Centrar el contenido dentro de cada grupo */
+    flex: 1; /* Asegurar que los grupos tengan el mismo tamaño */
+}
+
+.visa-buttons {
+    display: flex; /* Usar diseño de flexbox */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    gap: 20px; /* Espaciado entre los botones */
+}
+
+/* Ajustes para diseño responsive */
+@media (max-width: 768px) {
+    .politicas-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .politica-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .header {
+        padding: 5px; /* Reducir el padding del header */
+    }
+
+    .header-content {
+        flex-direction: row; /* Organizar los elementos en línea */
+        justify-content: space-between; /* Espaciarlos uniformemente */
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    .nav-links {
+        display: flex; /* Mostrar los enlaces en línea */
+        gap: 10px; /* Espaciado entre los enlaces */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Reducir el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .form-section {
+        max-width: 100%;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .info-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .info-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .info-title {
+        font-size: 14px;
+    }
+
+    .info-description {
+        font-size: 12px;
+    }
+
+    .leaders-container {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .leaders-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tab-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .carousel-item {
+        min-width: auto;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu-item {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .necesito-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .necesito-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .visa-services-container {
+        padding: 15px;
+    }
+
+    .visa-services-title {
+        font-size: 20px;
+    }
+
+    .visa-services-description {
+        font-size: 14px;
+    }
+
+    .visa-services-list {
+        padding-left: 15px;
+    }
+
+    .visa-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .visa-buttons {
+        flex-direction: column; /* Apilar los botones en pantallas pequeñas */
+        gap: 10px; /* Reducir el espacio entre los botones */
+    }
+
+    .visa-services-container {
+        margin-top: 100px; /* Incrementar el margen superior para evitar que el header tape el contenido */
+    }
+}
+
+.visa-button-title {
+    color: #007bff; /* Cambiar el color de los títulos a azul */
+}
+
+/* Estilos específicos para el carrusel en la sección de dirigentes del gobierno */
+#government-leaders .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#government-leaders .leader-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#government-leaders .carousel-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+    width: 80%;
+}
+
+#government-leaders .carousel-item {
+    text-align: center;
+    min-width: 300px;
+    transition: transform 0.5s ease;
+}
+
+#government-leaders .carousel-item .leader-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#government-leaders .carousel-item .leader-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#government-leaders .carousel-item .leader-role {
+    font-size: 12px;
+    color: #ccc;
+}
+
+#government-leaders .carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#government-leaders .prev-button {
+    margin-right: 20px;
+}
+
+#government-leaders .next-button {
+    margin-left: 20px;
+}
+
+/* Estilos para el menú desplegable */
+#dropdown-menu {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 0;
+    right: 0; /* Alineado a la derecha */
+    width: 300px; /* Ancho fijo */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo claro */
+    z-index: 1000;
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es largo */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Fuera de la vista */
+}
+
+#dropdown-menu.show {
+    display: block; /* Mostrar cuando se active */
+    transform: translateX(0); /* Desplazarse hacia la vista */
+}

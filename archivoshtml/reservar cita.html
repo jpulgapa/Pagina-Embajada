@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar Cita</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body style="background-color: #ffffff;">
+  <header class="header">
+    <div class="header-content">
+      <div class="embassy-logo">
+        <img src="../img/use-bogota-seal.png" alt="United States Embassy Bogotá Seal" class="header-seal-image" />
+        <div class="embassy-title" data-es="CITAS DE LA EMBAJADA" data-en="EMBASSY APPOINTMENTS">CITAS DE LA EMBAJADA</div>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html" class="menu-toggle" data-es="Inicio" data-en="Home">Inicio</a>
+        <div class="language-selector">
+          <a href="#" id="language-toggle" class="language-toggle" data-es="Idioma ▼" data-en="Language ▼">Language ▼</a>
+          <div id="language-dropdown" class="language-dropdown">
+            <a href="#" data-lang="es" class="language-option">🇪🇸 Español</a>
+            <a href="#" data-lang="en" class="language-option">🇺🇸 English</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <section class="form-section" style="margin-top: 120px;">
+        <h2 data-es="Reservar Cita" data-en="Schedule appointment">Programar cita</h2>
+
+    <form class="appointment-form" id="appointmentForm">
+      <label for="nombre" data-es="Usuario o correo" data-en="User or correo">Usuario o correo</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+            <label for="password" data-es="Contraseña" data-en="Password">Contraseña</label>
+            <input type="password" id="password" name="password" required /> 
+
+            <button type="submit" data-es="Reservar" data-en="Book">Reservar</button>
+
+            <div id="successMessage" style="color: green; margin-top: 15px; font-weight: bold; display: none;"></div>
+        </form>
+    </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="../script.js"></script>
+  <script src="../email.js"></script>
+</body>
+</html>

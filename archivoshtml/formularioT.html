@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solicitar Formulario</title>
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body style="background-color: #ffffff;">
+    <header class="header">
+        <div class="header-content">
+            <div class="embassy-logo">
+                <img src="../img/use-bogota-seal.png" alt="United States Embassy Bogotá Seal" class="header-seal-image" />
+                <div class="embassy-title" data-es="CITAS DE LA EMBAJADA" data-en="EMBASSY APPOINTMENTS">CITAS DE LA EMBAJADA</div>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html" class="menu-toggle" data-es="Inicio" data-en="Home">Inicio</a>
+                <div class="language-selector">
+                    <a href="#" id="language-toggle" class="language-toggle" data-es="Idioma ▼" data-en="Language ▼">Language ▼</a>
+                    <div id="language-dropdown" class="language-dropdown">
+                        <a href="#" data-lang="es" class="language-option">🇪🇸 Español</a>
+                        <a href="#" data-lang="en" class="language-option">🇺🇸 English</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="form-section" style="margin-top: 120px;">
+        <h2 data-es="Solicitar formulario" data-en="Request form">Solicitar formulario</h2>
+
+        <form id="formularioEmail" class="appointment-form">
+            <label for="nombre" data-es="Nombre" data-en="Name">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+
+            <label for="proporcionado" data-es="Proporcionado" data-en="Provided">Proporcionado</label>
+            <input type="text" id="proporcionado" name="proporcionado" required placeholder="Ejemplo: Empresa, Agencia, etc.">
+
+            <label for="fecha_nacimiento" data-es="Fecha de nacimiento" data-en="Date of Birth">Fecha de nacimiento</label>
+            <input type="date" id="fecha_nacimiento" name="" required />
+
+            <label for="lugar_nacimiento" data-es="Lugar de nacimiento" data-en="Place of Birth">Lugar de nacimiento</label>
+            <select id="lugar_nacimiento" name="lugar_nacimiento" required>
+                <option value="">Seleccione un país</option>
+                <option value="Afganistán">Afganistán</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Arabia Saudita">Arabia Saudita</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Corea del Sur">Corea del Sur</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Dinamarca">Dinamarca</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egipto">Egipto</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="España">España</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Francia">Francia</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="India">India</option>
+                <option value="Italia">Italia</option>
+                <option value="Japón">Japón</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Noruega">Noruega</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Rusia">Rusia</option>
+                <option value="Suecia">Suecia</option>
+                <option value="Suiza">Suiza</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+
+            <label for="genero" data-es="Género" data-en="Gender">Género</label>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccione...</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="nacionalidad" data-es="Nacionalidad" data-en="Nationality">Nacionalidad</label>
+            <input type="text" id="nacionalidad" name="nacionalidad" required placeholder="Ejemplo: Colombiana">
+
+            <label for="numero_documento" data-es="Número de documento" data-en="Document number">Número de documento</label>
+            <input type="text" id="numero_documento" name="numero_documento" required placeholder="Ejemplo: 123456789">
+
+            <label for="motivo_viaje" data-es="Motivo de viaje" data-en="Reason for travel">Motivo de viaje</label>
+            <input type="text" id="motivo_viaje" name="motivo_viaje" value="VISA TRABAJO" readonly style="background-color: #f0f0f0;" />
+
+            <label for="viaje" data-es="Tipo de viaje" data-en="Travel type">Viaje</label>
+            <input type="text" id="viaje" name="viaje" value="H2B/2B" readonly style="background-color: #f0f0f0;" />
+
+            <label for="dia" data-es="Día" data-en="Day">Día</label>
+            <input type="date" id="dia" name="dia" required />
+
+            <button type="submit" data-es="Solicitar" data-en="Request">Solicitar</button>
+        </form>
+
+        <p id="alerta" style="margin-top: 15px; font-weight: bold;"></p>
+    </section>
+
+    <script src="formularioT-script.js"></script>
+</body>
+</html>
